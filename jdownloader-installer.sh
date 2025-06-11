@@ -88,8 +88,7 @@ pct exec "$CT_ID" -- bash -c "
 #!/bin/sh
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
-xrdb \$HOME/.Xresources
-startxfce4 &
+/usr/bin/startxfce4 &
 EOF
   chmod +x /home/$CT_USER/.vnc/xstartup
   chown $CT_USER:$CT_USER /home/$CT_USER/.vnc/xstartup
