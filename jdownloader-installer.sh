@@ -47,7 +47,7 @@ pveam update >/dev/null
 TEMPLATE=$(pveam available | grep debian-12-standard | tail -1 | awk '{print $2}')
 [ -z "$TEMPLATE" ] && error_exit "Kein Debian 12 Template gefunden!"
 
-pct create "$CT_ID" "local:iso/$TEMPLATE" \
+pct create "$CT_ID" "local:vztmpl/$TEMPLATE" \
   -hostname "$CT_HOSTNAME" \
   -cores "$CT_CORES" \
   -memory "$CT_MEM" \
